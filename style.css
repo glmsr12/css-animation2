@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgb(177, 181, 177);
+}
+
+.container {
+  position: relative;
+  top: 20px;
+}
+
+.cup {
+  position: relative;
+  width: 180px;
+  height: 200px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 39%,
+    rgba(217, 170, 240, 1) 98%
+  );
+  border-bottom-left-radius: 30%;
+  border-bottom-right-radius: 30%;
+  z-index: 10;
+}
+
+.top {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    to right,
+    rgba(2, 0, 36, 1) 39%,
+    rgba(217, 170, 240, 1) 98%
+  );
+  border-radius: 50%;
+}
+
+.circle {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  width: calc(100% - 20px);
+  height: 50px;
+  background: rgb(217, 170, 240, 1);
+  background: linear-gradient(
+    to left,
+    rgba(2, 0, 36, 1) 39%,
+    rgba(217, 170, 240, 1) 98%
+  );
+  border-radius: 50%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.coffee {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgb(120, 66, 18), rgb(62, 32, 8));
+  border-radius: 50%;
+}
+
+.handle {
+  position: absolute;
+  right: -50px;
+  top: 20px;
+  width: 110px;
+  height: 130px;
+  border: 20px solid rgb(217, 170, 240, 1);
+  border-left: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-radius: 50%;
+  transform: rotate(40deg);
+}
+
+.plate {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 200px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    to left,
+    rgba(2, 0, 36, 1) 39%,
+    rgba(217, 170, 240, 1) 98%
+  );
+  border-radius: 50%;
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.2);
+}
+
+.plate::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border-radius: 50%;
+  background: linear-gradient(
+    to right,
+    rgba(2, 0, 36, 1) 39%,
+    rgba(217, 170, 240, 1) 98%
+  );
+}
